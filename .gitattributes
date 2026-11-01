@@ -1,0 +1,5 @@
+# Sorties de compilation conservées pour référence.
+archives/asm/** linguist-generated=true
+archives/vm/** linguist-generated=true
+examples/snake/*.vm linguist-generated=true
+archives/snake-variant/*.vm linguist-generated=true
