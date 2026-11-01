@@ -1,0 +1,13144 @@
+// Bootstrap
+    @256
+    D=A
+    @SP
+    M=D
+// call Sys.init 0
+@RET_Sys.init_1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@0
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Sys.init
+0;JMP
+(RET_Sys.init_1)
+
+//code de ..\SnakeVM\Main.vm
+// function Main.main 1
+(Main.main)
+@SP
+A=M
+M=0
+@SP
+M=M+1// call SnakeGame.new 0
+@RET_SnakeGame.new_1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@0
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@SnakeGame.new
+0;JMP
+(RET_SnakeGame.new_1)	//pop local 0
+        @0
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call SnakeGame.run 1
+@RET_SnakeGame.run_2
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@SnakeGame.run
+0;JMP
+(RET_SnakeGame.run_2)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call SnakeGame.dispose 1
+@RET_SnakeGame.dispose_3
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@SnakeGame.dispose
+0;JMP
+(RET_SnakeGame.dispose_3)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP
+//code de ..\SnakeVM\SnakeGame.vm
+// function SnakeGame.new 0
+(SnakeGame.new)	//push constant 10
+        @10
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Memory.alloc 1
+@RET_Memory.alloc_1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Memory.alloc
+0;JMP
+(RET_Memory.alloc_1)	//pop pointer 0
+        @SP
+        AM=M-1
+        D=M
+        @THIS
+        M=D
+        	//push constant 16
+        @16
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 8
+        @8
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 100
+        @100
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 9
+        @9
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push this 9
+        @9
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Array.new 1
+@RET_Array.new_2
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Array.new
+0;JMP
+(RET_Array.new_2)	//pop this 0
+        @0
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push this 9
+        @9
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Array.new 1
+@RET_Array.new_3
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Array.new
+0;JMP
+(RET_Array.new_3)	//pop this 1
+        @1
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 256
+        @256
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 128
+        @128
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 240
+        @240
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 128
+        @128
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 224
+        @224
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 2
+        @2
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 128
+        @128
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 2
+        @2
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 3
+        @3
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 2
+        @2
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 4
+        @4
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 3
+        @3
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 320
+        @320
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 4
+        @4
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 128
+        @128
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 5
+        @5
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 6
+        @6
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 7
+        @7
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push pointer 0
+        @THIS
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP// function SnakeGame.dispose 0
+(SnakeGame.dispose)	//push argument 0
+        @0
+        D=A
+        @ARG
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop pointer 0
+        @SP
+        AM=M-1
+        D=M
+        @THIS
+        M=D
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Array.dispose 1
+@RET_Array.dispose_4
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Array.dispose
+0;JMP
+(RET_Array.dispose_4)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Array.dispose 1
+@RET_Array.dispose_5
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Array.dispose
+0;JMP
+(RET_Array.dispose_5)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push pointer 0
+        @THIS
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Memory.deAlloc 1
+@RET_Memory.deAlloc_6
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Memory.deAlloc
+0;JMP
+(RET_Memory.deAlloc_6)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP// function SnakeGame.run 1
+(SnakeGame.run)
+@SP
+A=M
+M=0
+@SP
+M=M+1	//push argument 0
+        @0
+        D=A
+        @ARG
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop pointer 0
+        @SP
+        AM=M-1
+        D=M
+        @THIS
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 25
+        @25
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Output.moveCursor 2
+@RET_Output.moveCursor_7
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.moveCursor
+0;JMP
+(RET_Output.moveCursor_7)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 10
+        @10
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.new 1
+@RET_String.new_8
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.new
+0;JMP
+(RET_String.new_8)	//push constant 83
+        @83
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_9
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_9)	//push constant 78
+        @78
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_10
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_10)	//push constant 65
+        @65
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_11
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_11)	//push constant 75
+        @75
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_12
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_12)	//push constant 69
+        @69
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_13
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_13)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_14
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_14)	//push constant 71
+        @71
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_15
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_15)	//push constant 65
+        @65
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_16
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_16)	//push constant 77
+        @77
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_17
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_17)	//push constant 69
+        @69
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_18
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_18)// call Output.printString 1
+@RET_Output.printString_19
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.printString
+0;JMP
+(RET_Output.printString_19)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 22
+        @22
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 20
+        @20
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Output.moveCursor 2
+@RET_Output.moveCursor_20
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.moveCursor
+0;JMP
+(RET_Output.moveCursor_20)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.new 1
+@RET_String.new_21
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.new
+0;JMP
+(RET_String.new_21)	//push constant 70
+        @70
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_22
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_22)	//push constant 108
+        @108
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_23
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_23)	//push constant 101
+        @101
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_24
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_24)	//push constant 99
+        @99
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_25
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_25)	//push constant 104
+        @104
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_26
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_26)	//push constant 101
+        @101
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_27
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_27)	//push constant 115
+        @115
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_28
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_28)	//push constant 58
+        @58
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_29
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_29)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_30
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_30)	//push constant 68
+        @68
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_31
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_31)	//push constant 101
+        @101
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_32
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_32)	//push constant 112
+        @112
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_33
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_33)	//push constant 108
+        @108
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_34
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_34)	//push constant 97
+        @97
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_35
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_35)	//push constant 99
+        @99
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_36
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_36)	//push constant 101
+        @101
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_37
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_37)	//push constant 114
+        @114
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_38
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_38)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_39
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_39)	//push constant 124
+        @124
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_40
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_40)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_41
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_41)	//push constant 69
+        @69
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_42
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_42)	//push constant 83
+        @83
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_43
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_43)	//push constant 67
+        @67
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_44
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_44)	//push constant 58
+        @58
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_45
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_45)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_46
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_46)	//push constant 81
+        @81
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_47
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_47)	//push constant 117
+        @117
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_48
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_48)	//push constant 105
+        @105
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_49
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_49)	//push constant 116
+        @116
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_50
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_50)	//push constant 116
+        @116
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_51
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_51)	//push constant 101
+        @101
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_52
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_52)	//push constant 114
+        @114
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_53
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_53)// call Output.printString 1
+@RET_Output.printString_54
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.printString
+0;JMP
+(RET_Output.printString_54)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        (WHILE_EXP_1)
+	//push this 7
+        @7
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+// not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+@SP
+AM=M-1
+D=M
+@WHILE_END_2
+D;JNE
+// call Keyboard.keyPressed 0
+@RET_Keyboard.keyPressed_55
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@0
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Keyboard.keyPressed
+0;JMP
+(RET_Keyboard.keyPressed_55)	//pop local 0
+        @0
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 131
+        @131
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$1
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$1
+0;JMP
+(EQ_TRUE$1)
+@SP
+A=M-1
+M=-1
+(EQ_END$1)
+	//push this 3
+        @3
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 2
+        @2
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$2
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$2
+0;JMP
+(EQ_TRUE$2)
+@SP
+A=M-1
+M=-1
+(EQ_END$2)
+// not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+// and
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP & D
+@SP
+M=M-1
+A=M
+M=D&M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@IF_TRUE_3
+D;JNE
+@IF_END_5
+0;JMP
+(IF_TRUE_3)
+	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 3
+        @3
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_5)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 133
+        @133
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$3
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$3
+0;JMP
+(EQ_TRUE$3)
+@SP
+A=M-1
+M=-1
+(EQ_END$3)
+	//push this 3
+        @3
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$4
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$4
+0;JMP
+(EQ_TRUE$4)
+@SP
+A=M-1
+M=-1
+(EQ_END$4)
+// not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+// and
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP & D
+@SP
+M=M-1
+A=M
+M=D&M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@IF_TRUE_6
+D;JNE
+@IF_END_8
+0;JMP
+(IF_TRUE_6)
+	//push constant 2
+        @2
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 3
+        @3
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_8)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 130
+        @130
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$5
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$5
+0;JMP
+(EQ_TRUE$5)
+@SP
+A=M-1
+M=-1
+(EQ_END$5)
+	//push this 3
+        @3
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 4
+        @4
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$6
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$6
+0;JMP
+(EQ_TRUE$6)
+@SP
+A=M-1
+M=-1
+(EQ_END$6)
+// not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+// and
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP & D
+@SP
+M=M-1
+A=M
+M=D&M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@IF_TRUE_9
+D;JNE
+@IF_END_11
+0;JMP
+(IF_TRUE_9)
+	//push constant 3
+        @3
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 3
+        @3
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_11)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 132
+        @132
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$7
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$7
+0;JMP
+(EQ_TRUE$7)
+@SP
+A=M-1
+M=-1
+(EQ_END$7)
+	//push this 3
+        @3
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 3
+        @3
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$8
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$8
+0;JMP
+(EQ_TRUE$8)
+@SP
+A=M-1
+M=-1
+(EQ_END$8)
+// not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+// and
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP & D
+@SP
+M=M-1
+A=M
+M=D&M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@IF_TRUE_12
+D;JNE
+@IF_END_14
+0;JMP
+(IF_TRUE_12)
+	//push constant 4
+        @4
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 3
+        @3
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_14)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 140
+        @140
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$9
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$9
+0;JMP
+(EQ_TRUE$9)
+@SP
+A=M-1
+M=-1
+(EQ_END$9)
+@SP
+AM=M-1
+D=M
+@IF_TRUE_15
+D;JNE
+@IF_END_17
+0;JMP
+(IF_TRUE_15)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+	//pop this 7
+        @7
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_17)
+	//push pointer 0
+        @THIS
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call SnakeGame.update 1
+@RET_SnakeGame.update_56
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@SnakeGame.update
+0;JMP
+(RET_SnakeGame.update_56)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push pointer 0
+        @THIS
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call SnakeGame.draw 1
+@RET_SnakeGame.draw_57
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@SnakeGame.draw
+0;JMP
+(RET_SnakeGame.draw_57)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 100
+        @100
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Sys.wait 1
+@RET_Sys.wait_58
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Sys.wait
+0;JMP
+(RET_Sys.wait_58)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        @WHILE_EXP_1
+0;JMP
+(WHILE_END_2)
+@16384
+D=A
+@R1
+M=D
+@0
+D=A
+@R2
+M=D
+(CLEAR)
+@R1
+A=M
+M=0
+@R1
+M=M+1
+@R2
+M=M+1
+@32
+D=M
+@R2
+D=D-A
+@ENDCLEAR
+D;JEQ
+@CLEAR
+0;JMP
+(ENDCLEAR)
+	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 10
+        @10
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 25
+        @25
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Output.moveCursor 2
+@RET_Output.moveCursor_59
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.moveCursor
+0;JMP
+(RET_Output.moveCursor_59)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 10
+        @10
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.new 1
+@RET_String.new_60
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.new
+0;JMP
+(RET_String.new_60)	//push constant 71
+        @71
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_61
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_61)	//push constant 65
+        @65
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_62
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_62)	//push constant 77
+        @77
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_63
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_63)	//push constant 69
+        @69
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_64
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_64)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_65
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_65)	//push constant 79
+        @79
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_66
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_66)	//push constant 86
+        @86
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_67
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_67)	//push constant 69
+        @69
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_68
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_68)	//push constant 82
+        @82
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_69
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_69)	//push constant 33
+        @33
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_70
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_70)// call Output.printString 1
+@RET_Output.printString_71
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.printString
+0;JMP
+(RET_Output.printString_71)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 12
+        @12
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 22
+        @22
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Output.moveCursor 2
+@RET_Output.moveCursor_72
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.moveCursor
+0;JMP
+(RET_Output.moveCursor_72)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 13
+        @13
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.new 1
+@RET_String.new_73
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.new
+0;JMP
+(RET_String.new_73)	//push constant 83
+        @83
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_74
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_74)	//push constant 99
+        @99
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_75
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_75)	//push constant 111
+        @111
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_76
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_76)	//push constant 114
+        @114
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_77
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_77)	//push constant 101
+        @101
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_78
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_78)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_79
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_79)	//push constant 102
+        @102
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_80
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_80)	//push constant 105
+        @105
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_81
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_81)	//push constant 110
+        @110
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_82
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_82)	//push constant 97
+        @97
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_83
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_83)	//push constant 108
+        @108
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_84
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_84)	//push constant 58
+        @58
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_85
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_85)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_86
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_86)// call Output.printString 1
+@RET_Output.printString_87
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.printString
+0;JMP
+(RET_Output.printString_87)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push this 6
+        @6
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Output.printInt 1
+@RET_Output.printInt_88
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.printInt
+0;JMP
+(RET_Output.printInt_88)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP// function SnakeGame.update 5
+(SnakeGame.update)
+@SP
+A=M
+M=0
+@SP
+M=M+1
+@SP
+A=M
+M=0
+@SP
+M=M+1
+@SP
+A=M
+M=0
+@SP
+M=M+1
+@SP
+A=M
+M=0
+@SP
+M=M+1
+@SP
+A=M
+M=0
+@SP
+M=M+1	//push argument 0
+        @0
+        D=A
+        @ARG
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop pointer 0
+        @SP
+        AM=M-1
+        D=M
+        @THIS
+        M=D
+        	//push this 7
+        @7
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        @SP
+AM=M-1
+D=M
+@IF_TRUE_18
+D;JNE
+@IF_END_20
+0;JMP
+(IF_TRUE_18)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP(IF_END_20)
+	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 3
+        @3
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 4
+        @4
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 0
+        @0
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 1
+        @1
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push this 3
+        @3
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$10
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$10
+0;JMP
+(EQ_TRUE$10)
+@SP
+A=M-1
+M=-1
+(EQ_END$10)
+@SP
+AM=M-1
+D=M
+@IF_TRUE_21
+D;JNE
+@IF_END_23
+0;JMP
+(IF_TRUE_21)
+	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 8
+        @8
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//pop local 1
+        @1
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_23)
+	//push this 3
+        @3
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 2
+        @2
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$11
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$11
+0;JMP
+(EQ_TRUE$11)
+@SP
+A=M-1
+M=-1
+(EQ_END$11)
+@SP
+AM=M-1
+D=M
+@IF_TRUE_24
+D;JNE
+@IF_END_26
+0;JMP
+(IF_TRUE_24)
+	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 8
+        @8
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 1
+        @1
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_26)
+	//push this 3
+        @3
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 3
+        @3
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$12
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$12
+0;JMP
+(EQ_TRUE$12)
+@SP
+A=M-1
+M=-1
+(EQ_END$12)
+@SP
+AM=M-1
+D=M
+@IF_TRUE_27
+D;JNE
+@IF_END_29
+0;JMP
+(IF_TRUE_27)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 8
+        @8
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//pop local 0
+        @0
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_29)
+	//push this 3
+        @3
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 4
+        @4
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$13
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$13
+0;JMP
+(EQ_TRUE$13)
+@SP
+A=M-1
+M=-1
+(EQ_END$13)
+@SP
+AM=M-1
+D=M
+@IF_TRUE_30
+D;JNE
+@IF_END_32
+0;JMP
+(IF_TRUE_30)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 8
+        @8
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 0
+        @0
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_32)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 16
+        @16
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// lt
+@SP
+AM=M-1
+D=M
+A=A-1
+D=M-D 
+@LT_TRUE$14
+D;JLT
+@SP
+A=M-1
+M=0
+@LT_END$14
+0;JMP
+(LT_TRUE$14)
+@SP
+A=M-1
+M=-1
+(LT_END$14)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 496
+        @496
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// gt
+@SP
+AM=M-1
+D=M
+A=A-1
+D=M-D 
+@GT_TRUE$15
+D;JGT
+@SP
+A=M-1
+M=0
+@GT_END$15
+0;JMP
+(GT_TRUE$15)
+@SP
+A=M-1
+M=-1
+(GT_END$15)
+// or
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP | D
+@SP
+M=M-1
+A=M
+M=D|M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@IF_TRUE_33
+D;JNE
+@IF_END_35
+0;JMP
+(IF_TRUE_33)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+	//pop this 7
+        @7
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP(IF_END_35)
+	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 16
+        @16
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// lt
+@SP
+AM=M-1
+D=M
+A=A-1
+D=M-D 
+@LT_TRUE$16
+D;JLT
+@SP
+A=M-1
+M=0
+@LT_END$16
+0;JMP
+(LT_TRUE$16)
+@SP
+A=M-1
+M=-1
+(LT_END$16)
+	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 240
+        @240
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// gt
+@SP
+AM=M-1
+D=M
+A=A-1
+D=M-D 
+@GT_TRUE$17
+D;JGT
+@SP
+A=M-1
+M=0
+@GT_END$17
+0;JMP
+(GT_TRUE$17)
+@SP
+A=M-1
+M=-1
+(GT_END$17)
+// or
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP | D
+@SP
+M=M-1
+A=M
+M=D|M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@IF_TRUE_36
+D;JNE
+@IF_END_38
+0;JMP
+(IF_TRUE_36)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+	//pop this 7
+        @7
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP(IF_END_38)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 2
+        @2
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (WHILE_EXP_39)
+	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// lt
+@SP
+AM=M-1
+D=M
+A=A-1
+D=M-D 
+@LT_TRUE$18
+D;JLT
+@SP
+A=M-1
+M=0
+@LT_END$18
+0;JMP
+(LT_TRUE$18)
+@SP
+A=M-1
+M=-1
+(LT_END$18)
+// not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+@SP
+AM=M-1
+D=M
+@WHILE_END_40
+D;JNE
+	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$19
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$19
+0;JMP
+(EQ_TRUE$19)
+@SP
+A=M-1
+M=-1
+(EQ_END$19)
+	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$20
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$20
+0;JMP
+(EQ_TRUE$20)
+@SP
+A=M-1
+M=-1
+(EQ_END$20)
+// and
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP & D
+@SP
+M=M-1
+A=M
+M=D&M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@IF_TRUE_41
+D;JNE
+@IF_END_43
+0;JMP
+(IF_TRUE_41)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+	//pop this 7
+        @7
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP(IF_END_43)
+	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 2
+        @2
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        @WHILE_EXP_39
+0;JMP
+(WHILE_END_40)
+	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//pop local 2
+        @2
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (WHILE_EXP_44)
+	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// gt
+@SP
+AM=M-1
+D=M
+A=A-1
+D=M-D 
+@GT_TRUE$21
+D;JGT
+@SP
+A=M-1
+M=0
+@GT_END$21
+0;JMP
+(GT_TRUE$21)
+@SP
+A=M-1
+M=-1
+(GT_END$21)
+// not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+@SP
+AM=M-1
+D=M
+@WHILE_END_45
+D;JNE
+	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//pop local 2
+        @2
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        @WHILE_EXP_44
+0;JMP
+(WHILE_END_45)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 4
+        @4
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$22
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$22
+0;JMP
+(EQ_TRUE$22)
+@SP
+A=M-1
+M=-1
+(EQ_END$22)
+	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 5
+        @5
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$23
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$23
+0;JMP
+(EQ_TRUE$23)
+@SP
+A=M-1
+M=-1
+(EQ_END$23)
+// and
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP & D
+@SP
+M=M-1
+A=M
+M=D&M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@IF_TRUE_46
+D;JNE
+@IF_FALSE_47
+0;JMP
+(IF_TRUE_46)
+	//push pointer 0
+        @THIS
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call SnakeGame.eatFood 1
+@RET_SnakeGame.eatFood_89
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@SnakeGame.eatFood
+0;JMP
+(RET_SnakeGame.eatFood_89)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        @IF_END_48
+0;JMP
+(IF_FALSE_47)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Screen.setColor 1
+@RET_Screen.setColor_90
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Screen.setColor
+0;JMP
+(RET_Screen.setColor_90)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push local 3
+        @3
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 3
+        @3
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 14
+        @14
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 14
+        @14
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@R3
+M=D
+@SP
+AM=M-1
+D=M
+@R2
+M=D
+@SP
+AM=M-1
+D=M
+@R1
+M=D
+@SP
+AM=M-1
+D=M
+@R0
+M=D
+@R0
+D=M
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@1
+D=D+A
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@2
+D=D+A
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@3
+D=D+A
+@16384
+A=D+A
+M=-1
+	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        (IF_END_48)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP// function SnakeGame.eatFood 0
+(SnakeGame.eatFood)	//push argument 0
+        @0
+        D=A
+        @ARG
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop pointer 0
+        @SP
+        AM=M-1
+        D=M
+        @THIS
+        M=D
+        	//push this 6
+        @6
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 10
+        @10
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop this 6
+        @6
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 9
+        @9
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// lt
+@SP
+AM=M-1
+D=M
+A=A-1
+D=M-D 
+@LT_TRUE$24
+D;JLT
+@SP
+A=M-1
+M=0
+@LT_END$24
+0;JMP
+(LT_TRUE$24)
+@SP
+A=M-1
+M=-1
+(LT_END$24)
+@SP
+AM=M-1
+D=M
+@IF_TRUE_49
+D;JNE
+@IF_END_51
+0;JMP
+(IF_TRUE_49)
+	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//pop that 0
+        @0
+        D=A
+        @THAT
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop this 2
+        @2
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_51)
+	//push pointer 0
+        @THIS
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call SnakeGame.placeFood 1
+@RET_SnakeGame.placeFood_91
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@SnakeGame.placeFood
+0;JMP
+(RET_SnakeGame.placeFood_91)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP// function SnakeGame.placeFood 5
+(SnakeGame.placeFood)
+@SP
+A=M
+M=0
+@SP
+M=M+1
+@SP
+A=M
+M=0
+@SP
+M=M+1
+@SP
+A=M
+M=0
+@SP
+M=M+1
+@SP
+A=M
+M=0
+@SP
+M=M+1
+@SP
+A=M
+M=0
+@SP
+M=M+1	//push argument 0
+        @0
+        D=A
+        @ARG
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop pointer 0
+        @SP
+        AM=M-1
+        D=M
+        @THIS
+        M=D
+        	//push this 6
+        @6
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 4
+        @4
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 2
+        @2
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (WHILE_EXP_52)
+	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+// not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+@SP
+AM=M-1
+D=M
+@WHILE_END_53
+D;JNE
+	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 31
+        @31
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Math.multiply 2
+@RET_Math.multiply_92
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Math.multiply
+0;JMP
+(RET_Math.multiply_92)	//pop local 4
+        @4
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 17
+        @17
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 4
+        @4
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// lt
+@SP
+AM=M-1
+D=M
+A=A-1
+D=M-D 
+@LT_TRUE$25
+D;JLT
+@SP
+A=M-1
+M=0
+@LT_END$25
+0;JMP
+(LT_TRUE$25)
+@SP
+A=M-1
+M=-1
+(LT_END$25)
+@SP
+AM=M-1
+D=M
+@IF_TRUE_54
+D;JNE
+@IF_END_56
+0;JMP
+(IF_TRUE_54)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//pop local 4
+        @4
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_56)
+	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 30
+        @30
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Math.divide 2
+@RET_Math.divide_93
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Math.divide
+0;JMP
+(RET_Math.divide_93)	//push constant 30
+        @30
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Math.multiply 2
+@RET_Math.multiply_94
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Math.multiply
+0;JMP
+(RET_Math.multiply_94)// sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//pop local 0
+        @0
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 8
+        @8
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Math.multiply 2
+@RET_Math.multiply_95
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Math.multiply
+0;JMP
+(RET_Math.multiply_95)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 0
+        @0
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 6
+        @6
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 4
+        @4
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 14
+        @14
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Math.divide 2
+@RET_Math.divide_96
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Math.divide
+0;JMP
+(RET_Math.divide_96)	//push constant 14
+        @14
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Math.multiply 2
+@RET_Math.multiply_97
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Math.multiply
+0;JMP
+(RET_Math.multiply_97)// sub
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP - D
+@SP
+M=M-1
+A=M
+M=M-D
+// SP++
+@SP
+M=M+1
+	//pop local 1
+        @1
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 8
+        @8
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Math.multiply 2
+@RET_Math.multiply_98
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Math.multiply
+0;JMP
+(RET_Math.multiply_98)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 1
+        @1
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+	//pop local 2
+        @2
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 3
+        @3
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (WHILE_EXP_57)
+	//push local 3
+        @3
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// lt
+@SP
+AM=M-1
+D=M
+A=A-1
+D=M-D 
+@LT_TRUE$26
+D;JLT
+@SP
+A=M-1
+M=0
+@LT_END$26
+0;JMP
+(LT_TRUE$26)
+@SP
+A=M-1
+M=-1
+(LT_END$26)
+// not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+@SP
+AM=M-1
+D=M
+@WHILE_END_58
+D;JNE
+	//push local 3
+        @3
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$27
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$27
+0;JMP
+(EQ_TRUE$27)
+@SP
+A=M-1
+M=-1
+(EQ_END$27)
+	//push local 3
+        @3
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$28
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$28
+0;JMP
+(EQ_TRUE$28)
+@SP
+A=M-1
+M=-1
+(EQ_END$28)
+// and
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP & D
+@SP
+M=M-1
+A=M
+M=D&M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@IF_TRUE_59
+D;JNE
+@IF_END_61
+0;JMP
+(IF_TRUE_59)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 2
+        @2
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (IF_END_61)
+	//push local 3
+        @3
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 3
+        @3
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        @WHILE_EXP_57
+0;JMP
+(WHILE_END_58)
+	//push local 4
+        @4
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 7
+        @7
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 4
+        @4
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        @WHILE_EXP_52
+0;JMP
+(WHILE_END_53)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 4
+        @4
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop this 5
+        @5
+        D=A
+        @THIS
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP// function SnakeGame.draw 3
+(SnakeGame.draw)
+@SP
+A=M
+M=0
+@SP
+M=M+1
+@SP
+A=M
+M=0
+@SP
+M=M+1
+@SP
+A=M
+M=0
+@SP
+M=M+1	//push argument 0
+        @0
+        D=A
+        @ARG
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop pointer 0
+        @SP
+        AM=M-1
+        D=M
+        @THIS
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+// call Screen.setColor 1
+@RET_Screen.setColor_99
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Screen.setColor
+0;JMP
+(RET_Screen.setColor_99)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 0
+        @0
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        (WHILE_EXP_62)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 2
+        @2
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// lt
+@SP
+AM=M-1
+D=M
+A=A-1
+D=M-D 
+@LT_TRUE$29
+D;JLT
+@SP
+A=M-1
+M=0
+@LT_END$29
+0;JMP
+(LT_TRUE$29)
+@SP
+A=M-1
+M=-1
+(LT_END$29)
+// not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+@SP
+AM=M-1
+D=M
+@WHILE_END_63
+D;JNE
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 0
+        @0
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 1
+        @1
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push this 1
+        @1
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop pointer 1
+        @SP
+        AM=M-1
+        D=M
+        @THAT
+        M=D
+        	//push that 0
+        @0
+        D=A
+        @THAT
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//pop local 2
+        @2
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	// eq
+@SP
+AM=M-1       
+D=M          
+A=A-1        
+D=M-D       
+@EQ_TRUE$30
+D;JEQ
+@SP
+A=M-1
+M=0
+@EQ_END$30
+0;JMP
+(EQ_TRUE$30)
+@SP
+A=M-1
+M=-1
+(EQ_END$30)
+@SP
+AM=M-1
+D=M
+@IF_TRUE_64
+D;JNE
+@IF_FALSE_65
+0;JMP
+(IF_TRUE_64)
+	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 14
+        @14
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 14
+        @14
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@R3
+M=D
+@SP
+AM=M-1
+D=M
+@R2
+M=D
+@SP
+AM=M-1
+D=M
+@R1
+M=D
+@SP
+AM=M-1
+D=M
+@R0
+M=D
+@R0
+D=M
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@1
+D=D+A
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@2
+D=D+A
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@3
+D=D+A
+@16384
+A=D+A
+M=-1
+	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        @IF_END_66
+0;JMP
+(IF_FALSE_65)
+	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 2
+        @2
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 2
+        @2
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//push local 1
+        @1
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 12
+        @12
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//push local 2
+        @2
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 12
+        @12
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@R3
+M=D
+@SP
+AM=M-1
+D=M
+@R2
+M=D
+@SP
+AM=M-1
+D=M
+@R1
+M=D
+@SP
+AM=M-1
+D=M
+@R0
+M=D
+@R0
+D=M
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@1
+D=D+A
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@2
+D=D+A
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@3
+D=D+A
+@16384
+A=D+A
+M=-1
+	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        (IF_END_66)
+	//push local 0
+        @0
+        D=A
+        @LCL
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 1
+        @1
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//pop local 0
+        @0
+        D=A
+        @LCL
+        D=D+M
+        @R13
+        M=D
+        @SP
+        AM=M-1
+        D=M
+        @R13
+        A=M
+        M=D
+        @WHILE_EXP_62
+0;JMP
+(WHILE_END_63)
+	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // not
+// *SP = not *SP
+@SP
+A=M-1
+M=!M
+// call Screen.setColor 1
+@RET_Screen.setColor_100
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Screen.setColor
+0;JMP
+(RET_Screen.setColor_100)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push this 4
+        @4
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 4
+        @4
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//push this 5
+        @5
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 4
+        @4
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//push this 4
+        @4
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 10
+        @10
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+	//push this 5
+        @5
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 10
+        @10
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // add
+// SP--, D = *SP
+@SP
+M=M-1
+A=M
+D=M
+// SP--, *SP = *SP + D
+@SP
+M=M-1
+A=M
+M=D+M
+// SP++
+@SP
+M=M+1
+@SP
+AM=M-1
+D=M
+@R3
+M=D
+@SP
+AM=M-1
+D=M
+@R2
+M=D
+@SP
+AM=M-1
+D=M
+@R1
+M=D
+@SP
+AM=M-1
+D=M
+@R0
+M=D
+@R0
+D=M
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@1
+D=D+A
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@2
+D=D+A
+@16384
+A=D+A
+M=-1
+@R0
+D=M
+@3
+D=D+A
+@16384
+A=D+A
+M=-1
+	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Output.moveCursor 2
+@RET_Output.moveCursor_101
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.moveCursor
+0;JMP
+(RET_Output.moveCursor_101)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 7
+        @7
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.new 1
+@RET_String.new_102
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.new
+0;JMP
+(RET_String.new_102)	//push constant 83
+        @83
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_103
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_103)	//push constant 99
+        @99
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_104
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_104)	//push constant 111
+        @111
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_105
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_105)	//push constant 114
+        @114
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_106
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_106)	//push constant 101
+        @101
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_107
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_107)	//push constant 58
+        @58
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_108
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_108)	//push constant 32
+        @32
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call String.appendChar 2
+@RET_String.appendChar_109
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@2
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@String.appendChar
+0;JMP
+(RET_String.appendChar_109)// call Output.printString 1
+@RET_Output.printString_110
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.printString
+0;JMP
+(RET_Output.printString_110)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push this 6
+        @6
+        D=A
+        @THIS
+        A=D+M
+        D=M
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // call Output.printInt 1
+@RET_Output.printInt_111
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@1
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Output.printInt
+0;JMP
+(RET_Output.printInt_111)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        	//push constant 0
+        @0
+        D=A
+        @SP
+        A=M
+        M=D
+        @SP
+        M=M+1
+        // return
+@LCL
+D=M
+@R13
+M=D
+@5
+A=D-A
+D=M
+@R14
+M=D
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+@ARG
+D=M+1
+@SP
+M=D
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+@R14
+A=M
+0;JMP
+//code de ..\SnakeVM\Sys.vm
+// function Sys.init 0
+(Sys.init)// call Main.main 0
+@RET_Main.main_1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+@SP
+D=M
+@5
+D=D-A
+@0
+D=D-A
+@ARG
+M=D
+@SP
+D=M
+@LCL
+M=D
+@Main.main
+0;JMP
+(RET_Main.main_1)	//pop temp 0
+        @SP
+        AM=M-1
+        D=M
+        @5
+        M=D
+        (HALT)
+@HALT
+0;JMP

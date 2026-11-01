@@ -1,0 +1,1106 @@
+function SnakeGame.new 0
+push constant 16
+call Memory.alloc 1
+pop pointer 0
+push constant 16
+pop this 8
+push constant 100
+pop this 9
+push this 9
+call Array.new 1
+pop this 0
+push this 9
+call Array.new 1
+pop this 1
+push constant 256
+push constant 0
+push this 0
+add
+pop pointer 1
+pop that 0
+push constant 128
+push constant 0
+push this 1
+add
+pop pointer 1
+pop that 0
+push constant 240
+push constant 1
+push this 0
+add
+pop pointer 1
+pop that 0
+push constant 128
+push constant 1
+push this 1
+add
+pop pointer 1
+pop that 0
+push constant 224
+push constant 2
+push this 0
+add
+pop pointer 1
+pop that 0
+push constant 128
+push constant 2
+push this 1
+add
+pop pointer 1
+pop that 0
+push constant 3
+pop this 2
+push constant 4
+pop this 3
+push constant 320
+pop this 4
+push constant 128
+pop this 5
+push constant 0
+pop this 6
+push constant 0
+pop this 7
+push constant 1
+pop this 10
+push constant 150
+pop this 11
+push constant 0
+pop this 12
+push constant 50
+pop this 13
+push constant 208
+pop this 14
+push constant 128
+pop this 15
+push pointer 0
+return
+function SnakeGame.dispose 0
+push argument 0
+pop pointer 0
+push this 0
+call Array.dispose 1
+pop temp 0
+push this 1
+call Array.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function SnakeGame.run 1
+push argument 0
+pop pointer 0
+push constant 0
+push constant 25
+call Output.moveCursor 2
+pop temp 0
+push constant 10
+call String.new 1
+push constant 83
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 75
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 71
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 77
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label WHILE_EXP_1
+push this 7
+not
+not
+if-goto WHILE_END_2
+call Keyboard.keyPressed 0
+pop local 0
+push local 0
+push constant 131
+eq
+push this 3
+push constant 2
+eq
+not
+and
+if-goto IF_TRUE_3
+goto IF_END_5
+label IF_TRUE_3
+push constant 1
+pop this 3
+label IF_END_5
+push local 0
+push constant 133
+eq
+push this 3
+push constant 1
+eq
+not
+and
+if-goto IF_TRUE_6
+goto IF_END_8
+label IF_TRUE_6
+push constant 2
+pop this 3
+label IF_END_8
+push local 0
+push constant 130
+eq
+push this 3
+push constant 4
+eq
+not
+and
+if-goto IF_TRUE_9
+goto IF_END_11
+label IF_TRUE_9
+push constant 3
+pop this 3
+label IF_END_11
+push local 0
+push constant 132
+eq
+push this 3
+push constant 3
+eq
+not
+and
+if-goto IF_TRUE_12
+goto IF_END_14
+label IF_TRUE_12
+push constant 4
+pop this 3
+label IF_END_14
+push local 0
+push constant 140
+eq
+if-goto IF_TRUE_15
+goto IF_END_17
+label IF_TRUE_15
+push constant 0
+not
+pop this 7
+label IF_END_17
+push local 0
+push constant 32
+eq
+push this 12
+and
+if-goto IF_TRUE_18
+goto IF_END_20
+label IF_TRUE_18
+push pointer 0
+call SnakeGame.nextLevel 1
+pop temp 0
+label IF_END_20
+push this 12
+not
+if-goto IF_TRUE_21
+goto IF_END_23
+label IF_TRUE_21
+push pointer 0
+call SnakeGame.update 1
+pop temp 0
+push pointer 0
+call SnakeGame.draw 1
+pop temp 0
+push this 11
+call Sys.wait 1
+pop temp 0
+label IF_END_23
+goto WHILE_EXP_1
+label WHILE_END_2
+call Screen.clearScreen 0
+pop temp 0
+push constant 10
+push constant 25
+call Output.moveCursor 2
+pop temp 0
+push constant 10
+call String.new 1
+push constant 71
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 77
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 86
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 33
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 12
+push constant 18
+call Output.moveCursor 2
+pop temp 0
+push constant 13
+call String.new 1
+push constant 83
+call String.appendChar 2
+push constant 99
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 102
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 108
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push this 6
+call Output.printInt 1
+pop temp 0
+push constant 14
+push constant 18
+call Output.moveCursor 2
+pop temp 0
+push constant 16
+call String.new 1
+push constant 78
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+push constant 116
+call String.appendChar 2
+push constant 58
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push this 10
+call Output.printInt 1
+pop temp 0
+push constant 0
+return
+function SnakeGame.nextLevel 0
+push argument 0
+pop pointer 0
+push this 10
+push constant 10
+lt
+if-goto IF_TRUE_24
+goto IF_END_26
+label IF_TRUE_24
+push this 10
+push constant 1
+add
+pop this 10
+push this 11
+push constant 12
+sub
+pop this 11
+push this 11
+push constant 30
+lt
+if-goto IF_TRUE_27
+goto IF_END_29
+label IF_TRUE_27
+push constant 30
+pop this 11
+label IF_END_29
+push this 13
+push constant 50
+add
+pop this 13
+push constant 0
+pop this 12
+push constant 10
+push constant 18
+call Output.moveCursor 2
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push pointer 0
+call SnakeGame.placeFood 1
+pop temp 0
+label IF_END_26
+push constant 0
+return
+function SnakeGame.update 6
+push argument 0
+pop pointer 0
+push this 7
+push this 12
+or
+if-goto IF_TRUE_30
+goto IF_END_32
+label IF_TRUE_30
+push constant 0
+return
+label IF_END_32
+push this 2
+push constant 1
+sub
+push this 0
+add
+pop pointer 1
+push that 0
+pop local 2
+push this 2
+push constant 1
+sub
+push this 1
+add
+pop pointer 1
+push that 0
+pop local 3
+push constant 0
+push this 0
+add
+pop pointer 1
+push that 0
+pop local 0
+push constant 0
+push this 1
+add
+pop pointer 1
+push that 0
+pop local 1
+push this 3
+push constant 1
+eq
+if-goto IF_TRUE_33
+goto IF_END_35
+label IF_TRUE_33
+push local 1
+push this 8
+sub
+pop local 1
+label IF_END_35
+push this 3
+push constant 2
+eq
+if-goto IF_TRUE_36
+goto IF_END_38
+label IF_TRUE_36
+push local 1
+push this 8
+add
+pop local 1
+label IF_END_38
+push this 3
+push constant 3
+eq
+if-goto IF_TRUE_39
+goto IF_END_41
+label IF_TRUE_39
+push local 0
+push this 8
+sub
+pop local 0
+label IF_END_41
+push this 3
+push constant 4
+eq
+if-goto IF_TRUE_42
+goto IF_END_44
+label IF_TRUE_42
+push local 0
+push this 8
+add
+pop local 0
+label IF_END_44
+push local 0
+push constant 16
+lt
+push local 0
+push constant 496
+gt
+or
+if-goto IF_TRUE_45
+goto IF_END_47
+label IF_TRUE_45
+push constant 0
+not
+pop this 7
+push constant 0
+return
+label IF_END_47
+push local 1
+push constant 32
+lt
+push local 1
+push constant 224
+gt
+or
+if-goto IF_TRUE_48
+goto IF_END_50
+label IF_TRUE_48
+push constant 0
+not
+pop this 7
+push constant 0
+return
+label IF_END_50
+push constant 0
+pop local 4
+label WHILE_EXP_51
+push local 4
+push this 2
+lt
+not
+if-goto WHILE_END_52
+push local 4
+push this 0
+add
+pop pointer 1
+push that 0
+push local 0
+eq
+push local 4
+push this 1
+add
+pop pointer 1
+push that 0
+push local 1
+eq
+and
+if-goto IF_TRUE_53
+goto IF_END_55
+label IF_TRUE_53
+push constant 0
+not
+pop this 7
+push constant 0
+return
+label IF_END_55
+push local 4
+push constant 1
+add
+pop local 4
+goto WHILE_EXP_51
+label WHILE_END_52
+push local 0
+push this 4
+eq
+push local 1
+push this 5
+eq
+and
+pop local 5
+push this 2
+push constant 1
+sub
+pop local 4
+label WHILE_EXP_56
+push local 4
+push constant 0
+gt
+not
+if-goto WHILE_END_57
+push local 4
+push constant 1
+sub
+push this 0
+add
+pop pointer 1
+push that 0
+push local 4
+push this 0
+add
+pop pointer 1
+pop that 0
+push local 4
+push constant 1
+sub
+push this 1
+add
+pop pointer 1
+push that 0
+push local 4
+push this 1
+add
+pop pointer 1
+pop that 0
+push local 4
+push constant 1
+sub
+pop local 4
+goto WHILE_EXP_56
+label WHILE_END_57
+push local 0
+push constant 0
+push this 0
+add
+pop pointer 1
+pop that 0
+push local 1
+push constant 0
+push this 1
+add
+pop pointer 1
+pop that 0
+push local 5
+if-goto IF_TRUE_58
+goto IF_END_60
+label IF_TRUE_58
+push pointer 0
+call SnakeGame.eatFood 1
+pop temp 0
+label IF_END_60
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push local 2
+push local 3
+push local 2
+push constant 15
+add
+push local 3
+push constant 15
+add
+call Screen.drawRectangle 4
+pop temp 0
+push local 2
+pop this 14
+push local 3
+pop this 15
+push constant 0
+return
+function SnakeGame.eatFood 0
+push argument 0
+pop pointer 0
+push this 6
+push constant 10
+add
+pop this 6
+push this 6
+push this 13
+push constant 1
+sub
+gt
+if-goto IF_TRUE_61
+goto IF_END_63
+label IF_TRUE_61
+push this 10
+push constant 10
+lt
+if-goto IF_TRUE_64
+goto IF_END_66
+label IF_TRUE_64
+push constant 0
+not
+pop this 12
+label IF_END_66
+label IF_END_63
+push this 2
+push this 9
+lt
+if-goto IF_TRUE_67
+goto IF_END_69
+label IF_TRUE_67
+push this 14
+push this 2
+push this 0
+add
+pop pointer 1
+pop that 0
+push this 15
+push this 2
+push this 1
+add
+pop pointer 1
+pop that 0
+push this 2
+push constant 1
+add
+pop this 2
+label IF_END_69
+push pointer 0
+call SnakeGame.placeFood 1
+pop temp 0
+push constant 0
+return
+function SnakeGame.placeFood 5
+push argument 0
+pop pointer 0
+push this 6
+push constant 1
+add
+pop local 4
+push constant 0
+pop local 2
+label WHILE_EXP_70
+push local 2
+not
+not
+if-goto WHILE_END_71
+push local 4
+push constant 31
+call Math.multiply 2
+pop local 4
+push local 4
+push constant 17
+add
+pop local 4
+push local 4
+push constant 0
+lt
+if-goto IF_TRUE_72
+goto IF_END_74
+label IF_TRUE_72
+push local 4
+neg
+pop local 4
+label IF_END_74
+push local 4
+push local 4
+push constant 28
+call Math.divide 2
+push constant 28
+call Math.multiply 2
+sub
+pop local 0
+push local 0
+push this 8
+call Math.multiply 2
+push constant 32
+add
+pop local 0
+push local 4
+push this 6
+add
+push this 2
+add
+pop local 4
+push local 4
+push local 4
+push constant 10
+call Math.divide 2
+push constant 10
+call Math.multiply 2
+sub
+pop local 1
+push local 1
+push this 8
+call Math.multiply 2
+push constant 48
+add
+pop local 1
+push constant 0
+not
+pop local 2
+push constant 0
+pop local 3
+label WHILE_EXP_75
+push local 3
+push this 2
+lt
+not
+if-goto WHILE_END_76
+push local 3
+push this 0
+add
+pop pointer 1
+push that 0
+push local 0
+eq
+push local 3
+push this 1
+add
+pop pointer 1
+push that 0
+push local 1
+eq
+and
+if-goto IF_TRUE_77
+goto IF_END_79
+label IF_TRUE_77
+push constant 0
+pop local 2
+label IF_END_79
+push local 3
+push constant 1
+add
+pop local 3
+goto WHILE_EXP_75
+label WHILE_END_76
+push local 4
+push constant 7
+add
+pop local 4
+goto WHILE_EXP_70
+label WHILE_END_71
+push local 0
+pop this 4
+push local 1
+pop this 5
+push constant 0
+return
+function SnakeGame.draw 3
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+pop local 0
+label WHILE_EXP_80
+push local 0
+push this 2
+lt
+not
+if-goto WHILE_END_81
+push local 0
+push this 0
+add
+pop pointer 1
+push that 0
+pop local 1
+push local 0
+push this 1
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 0
+push constant 0
+eq
+if-goto IF_TRUE_82
+goto IF_FALSE_83
+label IF_TRUE_82
+push local 1
+push local 2
+push local 1
+push constant 14
+add
+push local 2
+push constant 14
+add
+call Screen.drawRectangle 4
+pop temp 0
+goto IF_END_84
+label IF_FALSE_83
+push local 1
+push constant 2
+add
+push local 2
+push constant 2
+add
+push local 1
+push constant 12
+add
+push local 2
+push constant 12
+add
+call Screen.drawRectangle 4
+pop temp 0
+label IF_END_84
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP_80
+label WHILE_END_81
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 4
+push constant 4
+add
+push this 5
+push constant 4
+add
+push this 4
+push constant 10
+add
+push this 5
+push constant 10
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+push constant 0
+call Output.moveCursor 2
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 0
+push constant 0
+call Output.moveCursor 2
+pop temp 0
+push constant 83
+call Output.printChar 1
+pop temp 0
+push constant 67
+call Output.printChar 1
+pop temp 0
+push constant 79
+call Output.printChar 1
+pop temp 0
+push constant 82
+call Output.printChar 1
+pop temp 0
+push constant 69
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push this 6
+call Output.printInt 1
+pop temp 0
+push constant 0
+push constant 20
+call Output.moveCursor 2
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 0
+push constant 20
+call Output.moveCursor 2
+pop temp 0
+push constant 76
+call Output.printChar 1
+pop temp 0
+push constant 69
+call Output.printChar 1
+pop temp 0
+push constant 86
+call Output.printChar 1
+pop temp 0
+push constant 69
+call Output.printChar 1
+pop temp 0
+push constant 76
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push this 10
+call Output.printInt 1
+pop temp 0
+push this 12
+if-goto IF_TRUE_85
+goto IF_END_87
+label IF_TRUE_85
+push constant 10
+push constant 18
+call Output.moveCursor 2
+pop temp 0
+push constant 76
+call Output.printChar 1
+pop temp 0
+push constant 69
+call Output.printChar 1
+pop temp 0
+push constant 86
+call Output.printChar 1
+pop temp 0
+push constant 69
+call Output.printChar 1
+pop temp 0
+push constant 76
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 85
+call Output.printChar 1
+pop temp 0
+push constant 80
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 45
+call Output.printChar 1
+pop temp 0
+push constant 32
+call Output.printChar 1
+pop temp 0
+push constant 83
+call Output.printChar 1
+pop temp 0
+push constant 80
+call Output.printChar 1
+pop temp 0
+push constant 65
+call Output.printChar 1
+pop temp 0
+push constant 67
+call Output.printChar 1
+pop temp 0
+push constant 69
+call Output.printChar 1
+pop temp 0
+label IF_END_87
+push constant 0
+return

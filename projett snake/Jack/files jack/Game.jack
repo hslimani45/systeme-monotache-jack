@@ -1,0 +1,109 @@
+class Game {
+    field int x, y, vx, vy, px, sc, go;
+
+    constructor Game new() {
+        let x = 256;
+        let y = 50;
+        let vx = 3;
+        let vy = 4;
+        let px = 230;
+        let sc = 0;
+        let go = 0;
+        return this;
+    }
+
+    method void run() {
+        var int k;
+        var int oldX, oldY, oldPx;
+
+        let oldX = x;
+        let oldY = y;
+        let oldPx = px;
+
+        do Screen.clearScreen();
+        do Screen.setColor(true);
+        do drawScore();
+
+        while (go = 0) {
+            let k = Keyboard.keyPressed();
+
+            if (k = 130) {
+                if (px > 15) {
+                    let px = px - 15;
+                }
+            }
+
+            if (k = 132) {
+                if (px < 447) {
+                    let px = px + 15;
+                }
+            }
+
+            let x = x + vx;
+            let y = y + vy;
+
+            if (x < 10) {
+                let vx = 0 - vx;
+                let x = 10;
+            }
+
+            if (x > 502) {
+                let vx = 0 - vx;
+                let x = 502;
+            }
+
+            if (y < 25) {
+                let vy = 0 - vy;
+                let y = 25;
+            }
+
+            if (y > 210) {
+                if (y < 230) {
+                    if (x > px) {
+                        if (x < (px + 50)) {
+                            let vy = 0 - vy;
+                            let y = 210;
+                            let sc = sc + 1;
+                        }
+                    }
+                }
+            }
+
+            if (y > 250) {
+                let go = 1;
+            }
+
+            // Effacer ancienne position
+            do Screen.setColor(false);
+            do Screen.drawCircle(oldX, oldY, 5);
+            do Screen.drawRectangle(oldPx, 220, oldPx + 50, 226);
+
+            // Dessiner nouvelle position
+            do Screen.setColor(true);
+            do Screen.drawCircle(x, y, 5);
+            do Screen.drawRectangle(px, 220, px + 50, 226);
+            
+            // Redessiner le score (chiffres en haut au centre)
+            do drawScore();
+
+            let oldX = x;
+            let oldY = y;
+            let oldPx = px;
+
+            do Sys.wait(30);
+        }
+
+        return;
+    }
+
+    method void drawScore() {
+        do Output.moveCursor(1, 30);
+        do Output.printInt(sc);
+        return;
+    }
+
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+}

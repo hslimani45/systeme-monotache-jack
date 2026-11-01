@@ -1,0 +1,343 @@
+/** Jeu Snake avec 10 niveaux de difficulté */
+class SnakeGame {
+    field Array snakeX, snakeY;
+    field int snakeLength;
+    field int direction;
+    field int foodX, foodY;
+    field int score;
+    field boolean gameOver;
+    field int blockSize;
+    field int maxLength;
+    field int level;
+    field int speed;
+    field boolean levelComplete;
+    field int scoreToNextLevel;
+    field int prevTailX, prevTailY;
+
+    constructor SnakeGame new() {
+        let blockSize = 16;
+        let maxLength = 100;
+        let snakeX = Array.new(maxLength);
+        let snakeY = Array.new(maxLength);
+        
+        let snakeX[0] = 256;
+        let snakeY[0] = 128;
+        let snakeX[1] = 240;
+        let snakeY[1] = 128;
+        let snakeX[2] = 224;
+        let snakeY[2] = 128;
+        let snakeLength = 3;
+        
+        let direction = 4;
+        let foodX = 320;
+        let foodY = 128;
+        let score = 0;
+        let gameOver = false;
+        let level = 1;
+        let speed = 150;
+        let levelComplete = false;
+        let scoreToNextLevel = 50;
+        let prevTailX = 208;
+        let prevTailY = 128;
+        
+        return this;
+    }
+
+    method void dispose() {
+        do snakeX.dispose();
+        do snakeY.dispose();
+        do Memory.deAlloc(this);
+        return;
+    }
+
+    method void run() {
+        var int key;
+        
+        do Output.moveCursor(0, 25);
+        do Output.printString("SNAKE GAME");
+        
+        while (~gameOver) {
+            let key = Keyboard.keyPressed();
+            
+            if ((key = 131) & (~(direction = 2))) { let direction = 1; }
+            if ((key = 133) & (~(direction = 1))) { let direction = 2; }
+            if ((key = 130) & (~(direction = 4))) { let direction = 3; }
+            if ((key = 132) & (~(direction = 3))) { let direction = 4; }
+            
+            if (key = 140) { let gameOver = true; }
+            
+            if ((key = 32) & levelComplete) {
+                do nextLevel();
+            }
+            
+            if (~levelComplete) {
+                do update();
+                do draw();
+                do Sys.wait(speed);
+            }
+        }
+        
+        do Screen.clearScreen();
+        do Output.moveCursor(10, 25);
+        do Output.printString("GAME OVER!");
+        do Output.moveCursor(12, 18);
+        do Output.printString("Score final: ");
+        do Output.printInt(score);
+        do Output.moveCursor(14, 18);
+        do Output.printString("Niveau atteint: ");
+        do Output.printInt(level);
+        
+        return;
+    }
+
+    method void nextLevel() {
+        if (level < 10) {
+            let level = level + 1;
+            let speed = speed - 12;
+            if (speed < 30) { let speed = 30; }
+            let scoreToNextLevel = scoreToNextLevel + 50;
+            let levelComplete = false;
+            
+            do Output.moveCursor(10, 18);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            do Output.printChar(32);
+            
+            do placeFood();
+        }
+        return;
+    }
+
+    method void update() {
+        var int newX, newY;
+        var int tailX, tailY;
+        var int i;
+        var boolean ate;
+        
+        if (gameOver | levelComplete) { return; }
+        
+        let tailX = snakeX[snakeLength - 1];
+        let tailY = snakeY[snakeLength - 1];
+        
+        let newX = snakeX[0];
+        let newY = snakeY[0];
+        
+        if (direction = 1) { let newY = newY - blockSize; }
+        if (direction = 2) { let newY = newY + blockSize; }
+        if (direction = 3) { let newX = newX - blockSize; }
+        if (direction = 4) { let newX = newX + blockSize; }
+        
+        if ((newX < 16) | (newX > 496)) {
+            let gameOver = true;
+            return;
+        }
+        if ((newY < 32) | (newY > 224)) {
+            let gameOver = true;
+            return;
+        }
+        
+        let i = 0;
+        while (i < snakeLength) {
+            if ((snakeX[i] = newX) & (snakeY[i] = newY)) {
+                let gameOver = true;
+                return;
+            }
+            let i = i + 1;
+        }
+        
+        let ate = ((newX = foodX) & (newY = foodY));
+        
+        let i = snakeLength - 1;
+        while (i > 0) {
+            let snakeX[i] = snakeX[i - 1];
+            let snakeY[i] = snakeY[i - 1];
+            let i = i - 1;
+        }
+        
+        let snakeX[0] = newX;
+        let snakeY[0] = newY;
+        
+        if (ate) {
+            do eatFood();
+        }
+        
+        do Screen.setColor(false);
+        do Screen.drawRectangle(tailX, tailY, tailX + 15, tailY + 15);
+        
+        let prevTailX = tailX;
+        let prevTailY = tailY;
+        
+        return;
+    }
+
+    method void eatFood() {
+        let score = score + 10;
+        
+        if (score > (scoreToNextLevel - 1)) {
+            if (level < 10) {
+                let levelComplete = true;
+            }
+        }
+        
+        if (snakeLength < maxLength) {
+            let snakeX[snakeLength] = prevTailX;
+            let snakeY[snakeLength] = prevTailY;
+            let snakeLength = snakeLength + 1;
+        }
+        
+        do placeFood();
+        
+        return;
+    }
+
+    method void placeFood() {
+        var int newX, newY;
+        var boolean valid;
+        var int i;
+        var int seed;
+        
+        let seed = score + 1;
+        let valid = false;
+        
+        while (~valid) {
+            let seed = seed * 31;
+            let seed = seed + 17;
+            if (seed < 0) { let seed = -seed; }
+            
+            let newX = seed - ((seed / 28) * 28);
+            let newX = (newX * blockSize) + 32;
+            
+            let seed = seed + score + snakeLength;
+            let newY = seed - ((seed / 10) * 10);
+            let newY = (newY * blockSize) + 48;
+            
+            let valid = true;
+            let i = 0;
+            while (i < snakeLength) {
+                if ((snakeX[i] = newX) & (snakeY[i] = newY)) {
+                    let valid = false;
+                }
+                let i = i + 1;
+            }
+            
+            let seed = seed + 7;
+        }
+        
+        let foodX = newX;
+        let foodY = newY;
+        
+        return;
+    }
+
+    method void draw() {
+        var int i;
+        var int x, y;
+        
+        do Screen.setColor(true);
+        let i = 0;
+        while (i < snakeLength) {
+            let x = snakeX[i];
+            let y = snakeY[i];
+            
+            if (i = 0) {
+                do Screen.drawRectangle(x, y, x + 14, y + 14);
+            } else {
+                do Screen.drawRectangle(x + 2, y + 2, x + 12, y + 12);
+            }
+            let i = i + 1;
+        }
+        
+        do Screen.setColor(true);
+        do Screen.drawRectangle(foodX + 4, foodY + 4, foodX + 10, foodY + 10);
+        
+        do Output.moveCursor(0, 26);
+        do Output.printChar(83);
+        do Output.printChar(78);
+        do Output.printChar(65);
+        do Output.printChar(75);
+        do Output.printChar(69);
+        do Output.printChar(32);
+        do Output.printChar(71);
+        do Output.printChar(65);
+        do Output.printChar(77);
+        do Output.printChar(69);
+        
+        do Output.moveCursor(0, 0);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.moveCursor(0, 0);
+        do Output.printChar(83);
+        do Output.printChar(67);
+        do Output.printChar(79);
+        do Output.printChar(82);
+        do Output.printChar(69);
+        do Output.printChar(32);
+        do Output.printInt(score);
+        
+        do Output.moveCursor(0, 52);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.printChar(32);
+        do Output.moveCursor(0, 52);
+        do Output.printChar(76);
+        do Output.printChar(69);
+        do Output.printChar(86);
+        do Output.printChar(69);
+        do Output.printChar(76);
+        do Output.printChar(32);
+        do Output.printInt(level);
+        
+        if (levelComplete) {
+            do Output.moveCursor(10, 18);
+            do Output.printChar(76);
+            do Output.printChar(69);
+            do Output.printChar(86);
+            do Output.printChar(69);
+            do Output.printChar(76);
+            do Output.printChar(32);
+            do Output.printChar(85);
+            do Output.printChar(80);
+            do Output.printChar(32);
+            do Output.printChar(45);
+            do Output.printChar(32);
+            do Output.printChar(83);
+            do Output.printChar(80);
+            do Output.printChar(65);
+            do Output.printChar(67);
+            do Output.printChar(69);
+        }
+        
+        return;
+    }
+}

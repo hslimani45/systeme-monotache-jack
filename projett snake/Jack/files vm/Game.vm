@@ -1,0 +1,247 @@
+function Game.new 0
+push constant 7
+call Memory.alloc 1
+pop pointer 0
+push constant 256
+pop this 0
+push constant 50
+pop this 1
+push constant 3
+pop this 2
+push constant 4
+pop this 3
+push constant 230
+pop this 4
+push constant 0
+pop this 5
+push constant 0
+pop this 6
+push pointer 0
+return
+function Game.run 4
+push argument 0
+pop pointer 0
+push this 0
+pop local 1
+push this 1
+pop local 2
+push this 4
+pop local 3
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push pointer 0
+call Game.drawScore 1
+pop temp 0
+label WHILE_EXP_1
+push this 6
+push constant 0
+eq
+not
+if-goto WHILE_END_2
+call Keyboard.keyPressed 0
+pop local 0
+push local 0
+push constant 130
+eq
+if-goto IF_TRUE_3
+goto IF_END_5
+label IF_TRUE_3
+push this 4
+push constant 15
+gt
+if-goto IF_TRUE_6
+goto IF_END_8
+label IF_TRUE_6
+push this 4
+push constant 15
+sub
+pop this 4
+label IF_END_8
+label IF_END_5
+push local 0
+push constant 132
+eq
+if-goto IF_TRUE_9
+goto IF_END_11
+label IF_TRUE_9
+push this 4
+push constant 447
+lt
+if-goto IF_TRUE_12
+goto IF_END_14
+label IF_TRUE_12
+push this 4
+push constant 15
+add
+pop this 4
+label IF_END_14
+label IF_END_11
+push this 0
+push this 2
+add
+pop this 0
+push this 1
+push this 3
+add
+pop this 1
+push this 0
+push constant 10
+lt
+if-goto IF_TRUE_15
+goto IF_END_17
+label IF_TRUE_15
+push constant 0
+push this 2
+sub
+pop this 2
+push constant 10
+pop this 0
+label IF_END_17
+push this 0
+push constant 502
+gt
+if-goto IF_TRUE_18
+goto IF_END_20
+label IF_TRUE_18
+push constant 0
+push this 2
+sub
+pop this 2
+push constant 502
+pop this 0
+label IF_END_20
+push this 1
+push constant 25
+lt
+if-goto IF_TRUE_21
+goto IF_END_23
+label IF_TRUE_21
+push constant 0
+push this 3
+sub
+pop this 3
+push constant 25
+pop this 1
+label IF_END_23
+push this 1
+push constant 210
+gt
+if-goto IF_TRUE_24
+goto IF_END_26
+label IF_TRUE_24
+push this 1
+push constant 230
+lt
+if-goto IF_TRUE_27
+goto IF_END_29
+label IF_TRUE_27
+push this 0
+push this 4
+gt
+if-goto IF_TRUE_30
+goto IF_END_32
+label IF_TRUE_30
+push this 0
+push this 4
+push constant 50
+add
+lt
+if-goto IF_TRUE_33
+goto IF_END_35
+label IF_TRUE_33
+push constant 0
+push this 3
+sub
+pop this 3
+push constant 210
+pop this 1
+push this 5
+push constant 1
+add
+pop this 5
+label IF_END_35
+label IF_END_32
+label IF_END_29
+label IF_END_26
+push this 1
+push constant 250
+gt
+if-goto IF_TRUE_36
+goto IF_END_38
+label IF_TRUE_36
+push constant 1
+pop this 6
+label IF_END_38
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push local 1
+push local 2
+push constant 5
+call Screen.drawCircle 3
+pop temp 0
+push local 3
+push constant 220
+push local 3
+push constant 50
+add
+push constant 226
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push this 0
+push this 1
+push constant 5
+call Screen.drawCircle 3
+pop temp 0
+push this 4
+push constant 220
+push this 4
+push constant 50
+add
+push constant 226
+call Screen.drawRectangle 4
+pop temp 0
+push pointer 0
+call Game.drawScore 1
+pop temp 0
+push this 0
+pop local 1
+push this 1
+pop local 2
+push this 4
+pop local 3
+push constant 30
+call Sys.wait 1
+pop temp 0
+goto WHILE_EXP_1
+label WHILE_END_2
+push constant 0
+return
+function Game.drawScore 0
+push argument 0
+pop pointer 0
+push constant 1
+push constant 30
+call Output.moveCursor 2
+pop temp 0
+push this 5
+call Output.printInt 1
+pop temp 0
+push constant 0
+return
+function Game.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
