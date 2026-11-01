@@ -57,15 +57,15 @@ Le jeu prévoit dix niveaux de difficulté.
 
 ![Écran de fin de partie du Snake](docs/images/snake-fin-partie.png)
 
-## Ce que le projet met en pratique
+## Du langage source à la machine
 
 Le lien entre langage source, pile d’exécution et mémoire est le point central du cours : analyser une expression Jack, produire les instructions VM correspondantes, puis traduire ces instructions pour l’architecture Hack.
 
 La génération de l’assembleur a été vérifiée. L’OS Jack n’est pas inclus dans cette sortie : elle ne constitue pas, à elle seule, un jeu autonome pour le CPU Emulator. Les fichiers d’essai archivés ne sont pas une suite de tests automatisés.
 
-Projet universitaire collectif. Ce dépôt présente la version conservée par Hassan Slimani.
+Projet universitaire collectif, réalisé en L2 (2025–2026).
 
 ## Autres projets universitaires
 
-- [POO — Morpion, Puissance 4 et Nim](https://github.com/hslimani45/Morpion-puissance4)
-- [Framework Web 1 — Bonnes Lectures](https://github.com/hslimani45/bonnes-lectures)
+- [POO — Morpion, Puissance 4 et Nim](https://github.com/hslimani45/jeux-java-poo)
+- [Framework Web 1 — Bonnes Lectures](https://github.com/hslimani45/bonnes-lectures-django)
